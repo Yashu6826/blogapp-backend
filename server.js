@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 const dbUrl =
-  "mongodb+srv://yashrajmern:yashraj321@cluster0.kf1pkrh.mongodb.net/?retryWrites=true&w=majority";
+  process.env.MONGO_URL;
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
